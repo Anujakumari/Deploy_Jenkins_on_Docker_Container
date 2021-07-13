@@ -5,11 +5,11 @@ import smtplib
 server=smtplib.SMTP('smtp.gmail.com' , 587)
 server.starttls()
 
-server.login("anujapathak998@gmail.com", "Kumari123#Suman")
+server.login("sender_mail", "password")
 subject = 'Jenkins_Task'
 
 msg = "Your code has been failed"
 
-server.sendmail("anujapathak998@gmail.com", "anujapathak999@gmail.com", msg)
+server.sendmail("sender_mail", "receiver_mail", msg)
 print("Email has been sent successfully !")
 server.quit()
